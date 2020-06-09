@@ -28,5 +28,7 @@ Math.substract = substract;
 Math.multiply = multiply;
 Math.divide= divide;
 
-// Con esto exportamos el módulo 
+// Con esto exportamos un módulo, variables, funciones, etc.
 module.exports = Math;
+
+// Con exports.nombrePropiedad = valorPropiedad exportamos una propiedad de un objeto 
