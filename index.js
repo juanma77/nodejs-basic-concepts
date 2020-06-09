@@ -1,23 +1,7 @@
-// console.log("Hola Mundo");
+// Para importar módulos externos 
+const math = require('./math.js');
 
-function add(x1, x2){
-    return x1 + x2; 
-}
-
-function substract(x1, x2){
-    return x1 - x2;
-}
-
-function multiply(x1,x2){
-    return x1 * x2;
-}
-
-function divide(x1, x2){
-
-    if( x2 == 0 ){
-        console.log("No se puede dividir entre cero");
-    }else{
-        return x1 / x2;
-    }
-
-}
+console.log(math.add(1, 2)); 
+console.log(math.substract(1, 2)); 
+console.log(math.multiply(1, 2)); 
+console.log(math.divide(1, 2)); 
