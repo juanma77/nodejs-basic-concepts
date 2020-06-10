@@ -9,6 +9,9 @@ const os = require('os');
 // Para trabajar con archivos del sistema
 const fs = require('fs');
 
+// Para trabajar con métodos y arquitectura http y poder crear un servidor 
+const http = require('http');
+
 console.log(math.add(1, 2)); 
 console.log(math.substract(1, 2)); 
 console.log(math.multiply(1, 2)); 
@@ -45,3 +48,16 @@ fs.readFile('./nuevo.txt', function ( err, data ){
     // En caso contrario convertimos los datos a string para poder leerlos adecuadamente 
     console.log(data.toString());
 });
+
+// Para crear un servidor e indicar el puerto en el cual estará escuchando 
+http.createServer(function ( req, res ){
+
+    // Escribimos el tipo de respuesta de la petición 
+    res.writeHead(200, { 'Content-type': 'text/html' }); 
+
+    // Contenido de la página 
+    res.write('<h1>Hola Mundo desde NodeJS</h1>');
+
+    // Debemos de finalizar siempre la respuesta 
+    res.end();
+}).listen(3800);
