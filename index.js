@@ -70,3 +70,16 @@ const server = http.createServer(handleServer);
 server.listen(3800, function(){
     console.log('Server running on port 3800!'.green);
 });
+
+// Para crear un servidor e indicar su puerto pero ahora utilizando Express (Comentar el código desde el inicio hasta la línea anterior y dejar este sin comentar para ver la funcionalidad con Express)
+const express = require('express');
+const server = express();
+
+server.get('/', ( req, res ) =>{
+   // console.log("Hola Mundo");
+    res.send('<h1>Hola Mundo desde Express</h1>');
+});
+
+server.listen(3800, () =>{
+    console.log('Server listenning on port 3800!');
+});
