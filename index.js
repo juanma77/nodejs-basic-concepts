@@ -12,6 +12,9 @@ const fs = require('fs');
 // Para trabajar con métodos y arquitectura http y poder crear un servidor 
 const http = require('http');
 
+// Para utilizar el módulo que permtie cambiar el color de las letras del terminal de node 
+const colors = require('colors');
+
 console.log(math.add(1, 2)); 
 console.log(math.substract(1, 2)); 
 console.log(math.multiply(1, 2)); 
@@ -65,5 +68,5 @@ const handleServer =  function ( req, res ){
 const server = http.createServer(handleServer);
 
 server.listen(3800, function(){
-    console.log('Server running on port 3800!');
+    console.log('Server running on port 3800!'.green);
 });
