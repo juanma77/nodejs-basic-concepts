@@ -1,0 +1,28 @@
+{
+  "name": "nodejs-basic-concepts",
+  "version": "1.0.0",
+  "description": "a project about node basic concepts",
+  "main": "index.js",
+  "dependencies": {
+    "colors": "^1.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juanma77/nodejs-basic-concepts.git"
+  },
+  "keywords": [
+    "nodejs",
+    "javascript",
+    "express"
+  ],
+  "author": "Juan Manuel Lopez Santana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juanma77/nodejs-basic-concepts/issues"
+  },
+  "homepage": "https://github.com/juanma77/nodejs-basic-concepts#readme"
+}
