@@ -50,7 +50,7 @@ fs.readFile('./nuevo.txt', function ( err, data ){
 });
 
 // Para crear un servidor e indicar el puerto en el cual estará escuchando 
-http.createServer(function ( req, res ){
+const handleServer =  function ( req, res ){
 
     // Escribimos el tipo de respuesta de la petición 
     res.writeHead(200, { 'Content-type': 'text/html' }); 
@@ -60,4 +60,10 @@ http.createServer(function ( req, res ){
 
     // Debemos de finalizar siempre la respuesta 
     res.end();
-}).listen(3800);
+}
+
+const server = http.createServer(handleServer);
+
+server.listen(3800, function(){
+    console.log('Server running on port 3800!');
+});
