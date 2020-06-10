@@ -35,3 +35,13 @@ fs.writeFile('./nuevo.txt', 'Este es el texto del nuevo archivo', function (err)
 });
 
 console.log('Esta línea se ejecutará después de la operación writeFile puesto que dicha operación es asíncrona');
+
+// Este método es para leer lo que se encuentra dentro de un archivo 
+fs.readFile('./nuevo.txt', function ( err, data ){
+    // Si existe un error avisamos al usuario 
+    if(err){
+        console.log('An error occurred while creating the file');
+    }
+    // En caso contrario convertimos los datos a string para poder leerlos adecuadamente 
+    console.log(data.toString());
+});
